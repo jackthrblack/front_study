@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>링크태그 연습</title>
+    <style>
+        /* a태그 스타일 적용. 태그선택자 */
+        a {
+            color:red;
+        }
+        /* 텍스트에 밑줄이 없어짐. */
+        a:link{
+            text-decoration: none; 
+        }
+        /* hover: 해당 요소에 마우스를 올렸을 때
+            가상선택자(:으로 표현) */
+        a:hover{
+            color:rosybrown;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 아마존 홈페이지로 이동하는 링크(새창에서 이동됨) /
+         br 따로 종료태그가 없음-> 줄바꿈 역할
+         속성을 쓰는게 주요 목적이라서 종료태그가 없다.
+     -->
+    <a href="https://www.amazon.com/" target="_blank">아마존으로 이동</a> <br> <br>
+    <!-- 쿠팡 홈페이지로 이동하는 링크 -->
+    <a href="https://www.coupang.com/">쿠팡으로 이동</a> <br>
+    <!-- 이미지 클릭했을 때 -->
+     <a href="https://www.naver.com" target="_blank">
+        <!-- src: 출력할 그림 경로, alt: 그림이 안 뜰 경우 보여줄 텍스트 -->
+        <img src="../images/a_w821fb3001_08e9253370a3e871f259ff0cb2047e7c7f8f2301.png"
+            alt="시바견밈">
+     </a>
+
+     <img src="../images/a_w821fb3001_08e9253370a3e871f259ff0cb2047e7c7f8f2301.png" 
+        alt="그냥 이미지">
+</body>
+</html>
