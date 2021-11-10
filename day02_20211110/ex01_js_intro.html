@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 변수, 연산자, 연산식, 조건문, 반복문, 함수
+        //DOM(Document Object Model) 제어 =>  html을 제어한다.
+        // 변수 선언
+        // 변수 선언시 타입을 별도로 지정하지 않음
+        // const: 처음 값을 대입하고 변경 불가.(자바 final과 유사)
+        var a = 1;
+        const b =10;
+        let c= 20;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        a=20;
+        //b=30;
+        c=40;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+
+        console.log("타입확인");
+        console.log(typeof(a));
+        console.log(typeof(b));
+        const d = "안녕하세요"
+        console.log(typeof(d));
+
+        const num1=10;
+        const num2=20;
+        // num1, num2의 사칙연산 결과 각각 출력
+        console.log(num1+num2);
+        console.log(num1-num2);
+        console.log(num1*num2);
+        console.log(num1/num2);
+        console.log(num1%num2);
+
+        // 대입 연산자일 경우 const가 아니라 let이다.
+        let num3=10;
+        num3+=10;
+        console.log(num3);
+
+        //비교연산
+        console.log(num1>num2)
+        console.log(num1>=num2)
+        console.log(num1<num2)
+        console.log(num1<=num2)
+        console.log(num1==num2)
+        console.log(num1!=num2)
+
+        let num4 = '20';
+        console.log(typeof(num2))
+        console.log(typeof(num4))
+        console.log(num2==num4) //true 형 변환이 발생했다고 본다.
+        console.log(num2===num4) //false
+        ///===: 값, 타입 모두 일치해야 true
+
+        const boole1 = true;
+        const boole2 = false;
+        console(bool1 && bool2) 
+        console(bool1 || bool2)
+        console(!bool1)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
