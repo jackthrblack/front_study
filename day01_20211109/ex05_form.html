@@ -7,7 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="test" method="post">
+    <!-- name은 필수!!! -->
+    <!-- 입력값을 담아갈 변수가 필요! -->
+    <form action="test" method="get">
         <!-- input :무엇인가를 입력해서 서버에 요청하는 태그 
             type="text" 무엇인가를 쓸 수 있는 공간-->
         입력1: <input type="text" name="bbb" placeholder="검색어입력"><br>
@@ -17,12 +19,74 @@
         <!-- tmep?aa=오오오오옹 
         test?bbb=ㅎㅎㅎㅎ
         test?bbb=자바&ccc=디비
-    test라는 주소로 자바라고 담긴 bbb와 디비라고 담긴 ccc가 간다
--->
+    test라는 주소로 자바라고 담긴 bbb와 디비라고 담긴 ccc가 간다-->
         <!-- post일 때 -->
         <!-- test -->
-        <!-- name속성값: 서버로 요청할 때 데이터를 담는 파라미터(변수) 이름 
-        -->
+        <!-- name속성값: 서버로 요청할 때 데이터를 담는 파라미터(변수) 이름 -->
+        
+        <!-- select -->
+        <!-- nation에 담겨서 값이 넘어간다. -->
+        국가: <select name="nation">
+            <option selected>선택하세요</option> <!-- 디폴트값이라고 생각하면 된다.-->
+            <option value="korea">대한민국</option>
+            <option value="usa">미국</option>
+            <option value="australia">호주</option>
+            <option value="canada">캐나다</option>
+        </select><br>
+        <!-- http://127.0.0.1:5500/day01_20211109/test?bbb=&ccc=&ddd=&nation=korea -->
+
+        <!-- 셀렉트를 활용하여 이메일 입력 홈을 만들어보시오 -->
+        <input type="text" name="email">@ <input type="text">
+        <select name="domain">
+        <option selected>직접입력</option>
+        <option value="naver.com">네이버</option>
+        <option value="daum.net">다음</option>
+        </select><br>
+
+        <!-- 장문의 글을 쓸 필요가 있을 때 -->
+        <textarea name="content" cols="100" rows="5"></textarea>
+
+        <!-- 비밀번호 -->
+        비밀번호<input type="password" name="pw"><br>
+        <!-- 라벨지정 -->
+        <label for="pw">비빌번호</label>
+        <input type="password" id="pw" name="pw"><br>
+
+        <!-- radio 버튼 -->
+        <!-- 여러개 선택지중 하나를 선택 할 때 사용 -->
+        <!-- 단, 네임 값이 같아야 하나만 선택이 가능하다 -->
+        <!-- 다를 경우 중복 체크. -->
+        가입유형:
+        <!-- 글자를 선택해도 체크 되게하는 법 -->
+        <!-- for는 어디를 지칭하느냐, id는 한 html 문서안에서 하나만 쓸 수 있음
+        중복x -->
+        <!-- 여러개의 선택지에서 할 때는 id가 달라야한다. -->
+        <input type="radio" id="p" name="jointype" value="personal">
+            <label for="p">개인</label> 
+        <input type="radio" id="d" name="jointype" value="commercial">
+            <label for="d">사업자</label>
+        <input type="radio" name="join" value="no">해당없음
+        <br>
+
+        <!-- checkbox -->
+        <!-- 라디오와 다르게 여러개를 아이디가 같아도 선택 가능 -->
+        활용가능언어:
+        <input type="checkbox" name="lang" value="java">자바
+        <input type="checkbox" name="lang" value="mysql">mysql
+        <input type="checkbox" name="lang" value="html">html
+        <input type="checkbox" name="lang" value="python">python
+        
+        <br>
+        생일:
+        <input type="date" name="brith">
+
+
+        <br>    
+        <!-- 이름을 일관성 있게 -->
+        <!-- front 화면의 name속성값, DTO 클래스 필드이름
+        DB 컬럼명을 모두 동일하게해야 정신건강에 좋다-->
+
+
         <input type="submit" value="전송">
 
         <!-- 네이버 검색 요청 주소: https://search.naver.com/search.naver  -->
