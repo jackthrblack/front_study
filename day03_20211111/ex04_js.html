@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun1(){
+            //DOM제어 
+            // document: 현재 html
+            // getElementById(): ()안에 작성한 특정id를 가져오겠다.
+            let ele1 = document.getElementById("id1");
+            console.log(ele1);
+            ele1 = ele1.innerHTML;
+            console.log(ele1)
+            //innerHTML: 시작태그, 종료태그 사이에 작성된 내용
+            let ele2=document.getElementById("id1").innerHTML;
+            console.log(ele2);
+
+            // queruSelector() : 
+            let ele3 = document.querySelector('#id1');
+            console.log(ele3)
+        }  
+
+        function fun2(){
+            // id2가 적용된 태그의 내용을 바꿈.
+            console.log('fun2함수 호출')
+            let ele1 = document.getElementById('id2');
+            ele1.innerHTML = '이 내용으로 바꿔봅십다.';
+        }
+
+    </script>
+</head>
+<body>
+    <button onclick="fun1()">함수호출</button>
+    <button onclick="fun2()">내용변경</button>
+    <p id="id1"> 
+        안녕하세요. 반갑습니다.
+    </p>
+
+    <p id='id2'>
+        하하하하하
+    </p>
+</body>
+</html>
