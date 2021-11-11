@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // if문을 사용하여 홀,짝 판별 코드
+
+        let a = 4;
+
+        if(a%2==0){
+            console.log("짝수")
+        }else{
+            console.log("홀수")
+        }
+
+        //if문 사용하여 3의배수인지 5의 배수인지 공배수인지 출력
+        
+        if(a%3==0 || a%5==0){
+            if(a%3==0 && a%5==0){
+                console.log("공배수")
+            }else if(a%3==0){
+                console.log("3의배수")
+            }else{
+                console.log("5의배수")
+            }
+        }else{
+            console.log("어디에도 속하지 않음.")
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
