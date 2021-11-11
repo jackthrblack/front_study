@@ -9,8 +9,42 @@
 </head>
 <body>
   <form action="test" method="post">
-      입력1: <input type="text" name="ggg">
+      입력1: <input type="text" name="ggg"><br>
+        <!-- select -->
+        <!-- nation에 담겨서 값이 넘어간다. -->
+        국가: <select name="nation">
+          <option selected>선택하세요</option> <!-- 디폴트값이라고 생각하면 된다.-->
+          <option value="korea">대한민국</option>
+          <option value="usa">미국</option>
+          <option value="australia">호주</option>
+          <option value="canada">캐나다</option>
+      </select><br>
 
+        이메일: <input type="text">@ <input type="text">
+        <select name="domain">
+          <option selected>선택하세요</option>
+          <option value="naver">네이버</option>
+          <option value="daum">다음</option>
+        </select>
+
+        <textarea name="content" cols="30" rows="10"></textarea><br>
+        비밀번호<input type="password" name="pw"><br>
+        <label for="pw">비빌번호</label>
+        <input type="password" id="pw" name="pw"><br>
+
+   
+        가입유형: <input type="radio" id="p"  name="jointype" value="personal">
+                  <label for="p">개인</label>
+                 <input type="radio"  id="d" name="jointype" value="commercial">
+                 <label for="d">사업자</label> 
+                 <input type="radio"  name="join" value="no"> 해당없음 <br>
+
+        다룰수 있는 언어: <input type="checkbox" name="lang" value="java">자바
+                         <input type="checkbox" name="lang" value="DB">디비
+                         <input type="checkbox" name="lang" value="HTML">html
+                         <input type="checkbox" name="lang" value="JS">JS <br>
+        생년월일: <input type="date" name="birth">
+        
       <input type="submit" value="전송">
   </form>
 </body>
