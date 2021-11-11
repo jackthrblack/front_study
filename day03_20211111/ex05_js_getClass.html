@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun1(){
+            let ele1 = document.getElementsByClassName('class1') 
+            console.log(ele1);
+            //배열 형태로 들어온다고 볼 수 있다.
+            console.log(ele1[0])
+            console.log(ele1[1])
+            console.log(ele1[2])
+
+            console.log(ele1[0].innerHTML)
+
+            let ele2 = document.getElementsByClassName('class1')[0];
+            console.log(ele2)
+
+            // class 요소를 가져올 때 querySelector를 쓰면 가장 첫번째 요소만 가져옴.
+            let ele3 = document.querySelector('.class1');
+            console.log(ele3)
+            
+            // 모든 class를 가져오고 싶을 때 querySelectorAll
+            let ele4 = document.querySelectorAll('.class1');
+            console.log(ele4)
+            console.log(ele4[0])
+            console.log(ele4[0].innerHTML)
+        }
+    </script>
+</head>
+<body>
+    <p class="class1">class1 부분입니다.</p>
+    <p class="class1">class1 두번째 부분입니다.</p>
+    <button onclick="fun1()">함수호출</button>
+</body>
+</html>
