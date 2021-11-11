@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // fun1이라는 함수 선언
+        function fun1(){ //가장 기본적인 함수 선언
+            console.log("fun1 함수 호출됨")
+        }
+        function fun2(){
+            console.log("fun2 함수 호출됨")
+            alert('어디에 나올까요')
+            // alert의 확인을 누른 후 출력이 된다.
+            console.log('이 문장은 언제나오는지')
+        }
+    </script>
+</head>
+<body>
+    <!-- 아래 버튼을 클릭했을 때 함수호출 -->
+    <!-- on이 앞에 붙어있으면 이벤트 속성이라고 보면 된다. -->
+    <button onclick="fun1()">함수호출</button>
+    <button onclick="fun2()">함수호출2</button>
+</body>
+</html>
