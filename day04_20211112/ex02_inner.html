@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function fun1(){
+            const num1 =5;
+            const num2 =3;
+
+            let ele1 = document.getElementById('id2');
+
+            // num1+num2 결과를 id2영역에 출력
+            // ele1.innerHTML = num1+num2;
+            // innerHTML이 textCOnent보다 보안성이 떨어진다.
+            // ele1.textContent = num1+num2;
+
+            // 출력을 줄때 스트링 형태로 태그를 줄 수 있다.
+            let num3 = num1+num2;
+            ele1.innerHTML = '<h2>'+num3+'</h2>';
+
+            let ulPrint = "<ul>";
+            for(let i=1; i<=3; i++){
+                ulPrint +="<li>" +i+ "</li>"
+            }
+            ulPrint +="</ul>"
+            const ele2 = document.getElementById('id3');
+            id3.innerHTML = ulPrint;
+
+        }
+    </script>
+</head>
+<body>
+    <p id="id1" onclick="fun1()">html 재밋...ㄷ..?</p>
+
+    <p id="id2">
+
+    </p>
+
+    <p id="id3">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </p>
+</body>
+</html>

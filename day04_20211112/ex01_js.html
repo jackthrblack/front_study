@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- js 파일을 import 
+        defer 속성: html 문서를 모두 읽고 나서 js를 실행-->
+    <script src="./event.js" defer></script>
+
+    <!-- <script>
+        const ele1 = document.getElementById('id2');
+        // addEventListener 이벤트를 감지하는 이벤트.
+        //addEventListener('이벤트종류', 실행할함수) -> 매개변수 2개
+        // id2가 click 되면 함수를 진행시켜라.
+        // 이 상태로 먼저 실행을 하면 오류가 뜨는데 이 이유는 위에서부터 실행을해서
+        // id2를 읽을 수 없는거다.
+        ele1.addEventListener('click', function(){
+            console.log('id2가 지정된 요소 클릭됨');
+        });
+
+        function fun1(){
+            console.log('함수 호출됨')
+        }
+    </script> -->
+
+</head>
+<body>
+    <!-- onclick은 꼭 버튼 태그 뿐만이 아니라 
+        일반 함수에도 호출 가능하다.  -->
+    <p id="id1" onclick="fun1()">오늘은 금요일~!</p>
+    <p id="id2">내일은 토요일!@ yEEEEEEEEEEEah~~</p>
+</body>
+
+</html>

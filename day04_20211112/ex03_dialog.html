@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- dialog.js 파일을 만들어서
+    alert 호출은 버튼을 클릭햇을 때 alertFunction 이라는 함수를 호출(onclick)
+    confirm 호출은 addEventListener를 이용하여 클릭했을때 익명함수를 호출하도록 함
+    prompt 호출은 addEventListener를 이용하여 클릭했을때 promptFunction 이라는 함수를 호촐 
+    -->
+    <script src="./dialog.js" defer></script>
+</head>
+<body>
+    <!-- 대화상자(dialog):alert, confirm, prompt -->
+    <button id='id1' onclick="fun1()">alert 호출</button>
+    <button id='id2'>confirm 호출</button>
+    <button id='id3'>prompt 호출</button>
+</body>
+</html>
