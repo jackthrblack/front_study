@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function grade(){
+
+            const score = document.getElementById('score').value
+            let grade;
+            if(score>90){
+               grade = 'a';
+            }
+
+            const result = document.getElementById('result');
+            result.innerHTML = grade;
+
+            const output = document.getElementById('abc');
+            output.value=grade;
+        }
+    </script>
+
+</head>
+<body>
+    점수 : <input type="text" id='score'> <br>
+    성적 : <input type="text" id='abc'> <br>
+    <button onclick="grade()">성적계산</button> <br>
+    <p id="result">
+        성적출력
+    </p>
+</body>
+</html>
