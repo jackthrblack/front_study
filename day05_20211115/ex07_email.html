@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function select(){
+
+            const sel = document.getElementById('sel');
+            const domain = document.getElementById('domain');
+            domain.value = sel.value;
+            // .value가 두개가 있으면 값이 안나온다.
+        }   
+        
+        </script>
+
+</head>
+<body>
+    이메일: <input type="text" name="email">@ <input type="text" id="domain" name="domain">
+
+    <select  id="sel" onchange="select()">
+        <option >선택하세요</option>
+        <option value="naver.com">네이버</option>
+        <option value="daum.net">다음</option>
+    </select>
+</body>
+</html>
