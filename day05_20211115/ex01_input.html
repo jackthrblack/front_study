@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- onkeyup 키보드를 입력하고 떼는 순간 -->
+    인사말 : <input type="text" id="id1" onkeyup="fun1()"> <br>
+    <!-- addEventListener 방식 -->
+    인사말 : <input type="text" id="id1" > <br>
+
+    <!-- 키를 누르는 순간 -->
+    인사말1 : <input type="text" id="id1" onkeydown="fun1()"> <br>
+
+    <!-- 포커스를 잃었을때 동작 -->
+    인사말2 : <input type="text" id="id2" onblur="fun2()"> <br>
+     <!-- addEventListener 방식 -->
+    인사말2 : <input type="text" id="id2"> <br>
+
+
+    인사말3: <input type="text" id="id3" value="이 내용은 초깃값이라고 보면 됩니다."> <br>
+    <button onclick="fun3()">작성</button>
+
+ <!-- addEventListener 방식 -->
+
+    <button id='btu1'>작성</button>
+
+
+    
+</body>
+
+<script>
+    const input1 = document.getElementById('id1')
+    input1.addEventListener('keyup', fun1);
+
+    function fun1(){
+       //  console.log("함수 호출")
+        const ele = document.getElementById('id2');
+        // input태그에 작성된 값 => value
+        console.log(ele.value);
+        
+    }
+    
+    const input2 = document.getElementById('id3')
+    input2.addEventListener('blur', fun2)
+
+    function fun2(){
+        console.log('onblur')
+        console.log(ele.value)
+    }
+
+    function fun3(){
+        const ele = document.getElementById('id3');
+      //  console.log(ele.value);
+       // ele.value = '이 내용은 어디에 나올까요'
+       const text = 'gkgkgkgk';
+       ele.value = text;
+    }
+</script>
+
+</html>
