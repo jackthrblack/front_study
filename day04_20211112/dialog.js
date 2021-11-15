@@ -18,7 +18,11 @@ ele2.addEventListener('click',function(){
 console.log("ele2의 값:",ele2);
 
 const elel3 = document.getElementById('id3');
+
 elel3.addEventListener('click',fun2);
 function fun2(){
     console.log("promptFunction")
+    const result = prompt("프롬프트함수입니다");
+    console.log(result);
 }
+
