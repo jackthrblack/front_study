@@ -6,7 +6,7 @@ function fun1(){
 
 const ele2 = document.getElementById('id2');
 ele2.addEventListener('click',function(){
-    console.log('id2 버튼 클릭');
+    console.log('id2 등장');
     const result = confirm("컨펌할수있습니다.");
     if(result){
         console.log("확인을 누르셨네요");

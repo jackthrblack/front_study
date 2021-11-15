@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function pD(){
+            const pw = document.getElementById('pw').value
+            pwLength = pw.length;
+
+            if(pwLength==0){
+                id.innerHTML = '필수항목';
+                id.style.color = 'red';
+            }else if(pwLength<8 || pwLength>20){
+                id.innerHTML = '8~20자 이내로 써주세요';
+                id.style.color = 'red';
+            }else if(pwLength>8 && pwLength<20){
+                id.innerHTML = 'Good';
+                id.style.color = 'green';
+            }
+        }
+
+        function pC(){
+            const pw = document.getElementById('pw').value
+            const pwCh = document.getElementById('pwCh').value
+
+            if(pw==pwCh){
+                id2.innerHTML = 'GOOD'
+                id2.style.color = 'green'
+            }else{
+                id2.innerHTML = '일치하지 않아요'
+                id2.style.color = 'red'
+            }
+
+        }
+    </script>
+
+
+</head>
+<body>
+    비밀번호: <input type="text" id="pw" onblur="pD()"> <br>
+    <span id="id"></span> <br>
+    비밀번호확인: <input type="text" id="pwCh" onkeyup="pC()"> <br>
+    <span id="id2"></span>
+</body>
+</html>

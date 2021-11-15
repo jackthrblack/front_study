@@ -8,17 +8,18 @@
 
     <script>
         function sum(){
-            var num1 = Number(document.getElementById('n1').value);
-            var num2 = Number(document.getElementById('n2').value);
-            document.getElementById('result').value =num1+num2;
+            var num1 = document.getElementById('n1').value;
+            var num2 = document.getElementById('n2').value;
+            
 
             // string -> number
-            // num1=parseInt(num1)
-            // num2=paresInt(num2)
-            // const sum1 = num1 + num2
-            // console.log(sum1);
-            // const result = document.getElementById('result')
-            // result.innerHTML = sum1;
+             num1=parseInt(num1)
+             num2=parseInt(num2)
+             
+             const sum = num1 + num2
+            console.log(sum);
+             const result = document.getElementById('result')
+             result.innerHTML = sum;
         }
     </script>
 
@@ -27,7 +28,7 @@
     숫자1 : <input type="text" id='n1'> <br>
     숫자2 : <input type="text" id='n2'> <br>
     <button onclick="sum()">덧셈계산</button> <br>
-    <textarea id="result"></textarea>
+    <p id='result'> </p>
 
 </body>
 </html>
