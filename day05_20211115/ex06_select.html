@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function fruitsSelect(){
+            let a;
+            const fruits = document.getElementById('fruits');
+            console.log(fruits.value)
+
+            //a=fruits.value;
+
+            const selected = document.getElementById('selected');
+            selected.value = fruits.value;
+        }
+    </script>
+</head>
+<body>
+    <!-- 선택항목이 4개가 있는 select 태그 -->
+    <!-- onchange 내가 무엇인가를 선택하면 작동 -->
+    선택 <select id="fruits" onchange="fruitsSelect()">
+    <option>선택하세요</option>
+    <option value="apple">사과</option>
+    <option value="starwberry">딸기</option>
+    <option value="watermelon">수박</option>
+    <option value="blueberry">블루베리</option>
+</select>
+<br>
+선택한 과일 : <input type="text" id="selected">
+</body>
+</html>
