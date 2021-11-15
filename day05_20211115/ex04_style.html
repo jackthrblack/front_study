@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*h2 태그요소에 스타일을 지정할 때*/
+
+        h2{
+            color: blue;
+            background-color: burlywood;
+        }
+
+        /* id가 id2인 요소에 스타일지정 */
+        #id2{
+            color: red;
+            background-color: black;
+        }
+
+        
+    </style>
+
+<script>
+    function changeColor(){
+        // id2 로 지정된 요소에 글자색 흰색으로 변경
+        const ele1=document.getElementById('id2');
+        //js를 이용하여 태그의 color 속성변경
+        ele1.style.color = 'white';
+    }
+
+    function disappear(){
+        const ele = document.getElementById('id3');
+        ele.style.visibility ='hidden';
+    }
+
+    function appear(){
+        const ele = document.getElementById('id3');
+        ele.style.visibility ='visible';
+    }
+</script>
+
+</head>
+<body>
+    <h2 id='id1'>안녕하세요</h2>
+    <h2 id='id2'>반가워용</h2>
+    <h2 id='id3'>반가워용!!!!</h2>
+
+    <button onclick="changeColor()">글자색변경</button>
+    <button onclick="disappear()">사라짐</button>
+    <button onclick="appear()">나타남</button>
+</body>
+</html>
