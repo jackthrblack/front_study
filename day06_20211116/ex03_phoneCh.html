@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function phoneCheck(){
+            const exp = /^\d{3}-\d{4}-\d{4}$/;
+            const phone = document.getElementById('phone').value;
+            const result = document.getElementById('phone-check-result');
+
+            if(phone.match(exp)){
+                result.innerHTML = '유효한형식입니다'
+                result.style.color = 'green';
+            }else{
+                result.innerHTML = '유효하지 않은 형식입니다'
+                result.style.color = 'red';
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- 010-1111-1111  -->
+    전화번호: <input type="text" id="phone" onblur="phoneCheck()">
+    <span id="phone-check-result"></span>
+</body>
+</html>

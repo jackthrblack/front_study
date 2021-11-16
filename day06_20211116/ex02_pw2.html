@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            display: block;
+            width: 300px;
+            height: 20px;
+        }
+    </style>
+
+    <script>
+        function ess(){
+            const pw = document.getElementById('pw').value;
+            const check=document.getElementById('check');
+            const exp = /^(?=.*[a-z])(?=.*\d)[a-z\d]{8,20}$/;
+            const pwLength = pw.length;
+
+            if(pwLength==0){
+                check.innerHTML='필수항목입니다.'
+                check.style.color='red';
+            }else if(pw.match(exp)){
+                check.innerHTML = 'GOOD'
+                check.style.color='green'
+            }else{
+                check.innerHTML = '다시 확인해주세요'
+                check.style.color='red'
+            }
+
+        }
+
+
+        function pwC(){
+            const pw = document.getElementById('pw').value;
+            const pwCh = document.getElementById('pwCh').value;
+            const check2 = document.getElementById('check2');
+
+            const pwLength = pw.length;
+            const pwChLength = pwCh.length;
+
+            if(pw==pwCh){
+                check2.innerHTML="Good";
+                check2.style.color='green';
+            }else{
+                check2.innerHTML="일치하지않아요";
+                check2.style.color='red';
+            }
+        
+        }
+
+        
+
+    </script>
+</head>
+<body>
+<!-- 비밀번호에 네이버와 같은 정규식 적용 
+1. 입력했는지 체크
+2. 정규식체크
+3. 자릿수 체크 등을 하고
+4. 일치여부 체크
+각 체크겨로가에 따라 입력카넹 아래에 메시지를 출력. -->
+
+    비밀번호 : <input type="text " placeholder="8~20자리로 입력" id="pw" onblur="ess()"> 
+    <span id="check"></span>
+    <br>
+    비밀번호확인 : <input type="text" placeholder="비밀번호 한 번 더" id="pwCh" onkeyup="pwC()"> 
+    <span id="check2"></span>
+ 
+</body>
+</html>

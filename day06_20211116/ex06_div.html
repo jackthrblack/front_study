@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html{
+            font-size: 10px;
+        }
+        /* 내용이 없을때는 사이즈를 지정해줘야 색이 보인다 */
+        .parent{
+            width: 300px;
+            height: 200px;
+            background-color: blue;
+            font-size: 20px; /* 기본 폰트 사이즈는 16*/
+        }
+
+        /* 자식 클래스는 별도의 너비를 주지 않으면 부모의 너비를 가져온다. */
+        .child{
+            height: 100px;
+            /* 10em = 200px -> 부모의 폰트사이즈(em) * 10 */
+            /* 10rem = 160px -> 부모가 아니라 html 기준*/
+            width: 10rem;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+
+        </div>
+    </div>
+</body>
+</html>

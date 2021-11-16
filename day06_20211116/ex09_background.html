@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body{
+        /* 스크롤 만들기용 */
+        height: 2000px;
+    }
+    .div1 {
+        width: 700px;
+        height: 400px;
+        background-color: red;
+        /* 그림을 배경으로 넣기 */
+        background-image: url(./11.jpg);
+
+        /* 사진 반복을하지 않겠다 */
+        background-repeat: no-repeat;
+
+        /* 가로축으로 반복 */
+        /* background-repeat: repeat-x; */
+
+        /* 세로축으로 반복 */
+        /* background-repeat: repeat-x; */
+
+        /* 가운데로 */
+        /* background-position: center; */
+
+        /* 우상단 위치 */
+        /* background-position: top right; */
+        
+        /* x축 시작점을 기준으로 떨어진위치 */
+        /* background-position: 100px 30px; */
+
+        /* background-size: auto; */
+
+        /* contain: 가로, 세로 중 짧은 쪽으로 그림 크기를 맞춤*/
+        /* background-size: contain; */
+
+        /* cover: 가로, 세로 중 넓은 쪽으로 그림 크기를 맞춤  */
+        /* background-size: cover; */
+
+        /* background-attachment: scroll; */
+
+        /* 그림은 고정되어있는데 고정되어있는 곳은 div 범위 안에서다. */
+        background-attachment: fixed;
+    }
+
+</style>
+<body>
+    <div class="div1"></div>
+    
+</body>
+</html>

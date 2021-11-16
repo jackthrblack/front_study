@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script>
+            function idCheck(){
+            // 영문소문자, 숫자, 6~10자리 정규식 
+            // 소문자 숫자가 반드시 1개 이상 사용되어야 함. 
+            // (반드시 소문자가 하나 사용돼야하고 숫자가 반드시 하나 사용돼야한다)[소괄호 부분 다시 한 번 더씀]{6자리보다 크고 10자리보다 작은 자릿수 표현}
+            const exp = /^(?=.*[a-z])(?=.*\d)[a-z\d]{6,10}$/;
+            
+            // 영문대소문자, 숫자, 6~10자리 정규식 
+            // 소문자, 대문자, 숫자가 반드시 1개이상 사용되어야 함. 
+            const exp1 = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,10}$/;
+            
+            // 네이버 아이디 정규식 
+            // 영문소문자, 숫자, -_ 특수문자, 5~20자리
+            // 소문자, 숫자, 특수문자(-_)가 반드시 1개 이상 사용되어야 함. 
+            // 특수문자는 대괄호 안에다가 쓴다.
+            const exp2 = /^(?=.*[a-z])(?=.*\d)(?=.*[-_])[a-z\d-_]{5,20}$/; 
+
+                const id = document.getElementById('id').value;
+                if(id.match(exp)){
+                    console.log('유효한 형식입니다.')
+                }else{
+                    console.log('유효하지 않은 형식입니다.')
+                }
+            }
+        </script>
+</head>
+<body>
+    아이디: <input type="text" id="id" onblur="idCheck()" placeholder="영문소문자, 숫자 조합하여 6~10글자 이내">
+    <!-- 정규식(regular expression) -->
+</body>
+</html>

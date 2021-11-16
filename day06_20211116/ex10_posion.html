@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 자식 요소에 대한 위치를 지정할 때는 부모요소에 
+            postion: relative를 반드시 지정해야 부모요소 안에서
+            위치를 잡을 수 있음. */
+        .wrap {
+            width: 500px;
+            height: 500px;
+            background-color: royalblue;
+            position: relative;
+        }
+        .container {
+            width: 300px;
+            background-color: #ccccee;
+            /* position: relative; */
+        }
+
+        .container .item{
+            border: 4px dashed red;
+            background-color: rgb(50, 163, 84);
+        }
+
+        .container .item:nth-child(1){
+            width: 100px;
+            height: 100px;
+        }
+
+        .container .item:nth-child(2){
+            width: 140px;
+            height: 70px;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+    </div>
+</body>
+</html>
