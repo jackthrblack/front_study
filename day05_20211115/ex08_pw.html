@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* 인풋 태그에 대한 스타일 지정
+        태그를 지정할때는 앞에 아무런 기호가 안붙는다. */
+        input{
+            /* inout 태그 : 인라인 요소 */
+            display: block;
+        }
+    </style>
 
     <script>
         function ess(){
@@ -46,10 +54,11 @@
     </script>
 </head>
 <body>
-    비밀번호 : <input type="text " placeholder="8~20자리로 입력" id="pw" onblur="ess()">
+    비밀번호 : <input type="text " placeholder="8~20자리로 입력" id="pw" onblur="ess()"> <br>
+  <!-- 비밀번호 : <input type="text " value="8~20자리로 입력" id="pw" onblur="ess()"> <br> -->
     <span id="check"></span>
     <br>
-    비밀번호확인 : <input type="text" placeholder="비밀번호 한 번 더" id="pwCh" onkeyup="pwC()">
+    비밀번호확인 : <input type="text" placeholder="비밀번호 한 번 더" id="pwCh" onkeyup="pwC()"> <br>
     <span id="check2"></span>
 </body>
 </html>
