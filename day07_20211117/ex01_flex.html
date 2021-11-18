@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* flex
+        부모요소 : flex container
+        자식요소 : flex items
+        부모요소에 display 속성을 flex로 주면 자식 요소들이 가로정렬됨 */
+        .container {
+            width: 350px;
+            height: 200px;
+            background-color: blue;
+            display: flex;
+            /* 자식요소너비가 부모보다 커지면 밀려서 다음줄에 표현됨
+            (자식요소의 크기는 유지) */
+            flex-wrap: nowrap;
+
+            /* 가로축 정렬 */
+            /* 중앙에 위치 */
+            justify-content: center;
+            /* 시작점 시작점은 언제나 왼쪽 */
+            /* justify-content: flex-start; */
+            /* 끝 부분으로 이동 오른쪽 */
+            justify-content: flex-end;
+
+            /* 세로축 정렬 */
+            align-items: center;
+        }
+
+        .container .item {
+            width: 100px;
+            height: 100px;
+            border: 3px dashed red;
+            background-color: orange;
+            /* 자식요소들이 부모 너비에 맞추기 위해 
+            일정한 간격으로 너비를 늘림 */
+            flex-grow: 1;
+        }
+
+        .container .item:nth-child(2){
+            /* 자기 너비 유지함 */
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+</body>
+</html>
